@@ -25,3 +25,21 @@ Playground for google script development.
   }
 }
 ```
+- `npx clasp login` (should open browser for google login)
+- `npx clasp create --type standalone`
+- create `hello.ts` file:
+```ts
+const greeter = (person: string) => {
+  return `Hello, ${person}!`;
+}
+
+function testGreeter() {
+  const user = 'Grant';
+  Logger.log(greeter(user));
+}
+```
+- `npx clasp push`
+- `npx clasp open`
+  - run `testGreeter()` and goto View > Logs to view the logs to see the result
+- _if your Apps Script project is configured to use the V8 Engine, you should set "target": "ES2019" in your tsconfig.json_
+  - did that
