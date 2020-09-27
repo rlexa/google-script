@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "login": "clasp login",
     "status": "clasp status > clasp-status.log",
     "deploy": "clasp push",
     "start": "clasp open"
