@@ -43,3 +43,26 @@ function testGreeter() {
   - run `testGreeter()` and goto View > Logs to view the logs to see the result
 - _if your Apps Script project is configured to use the V8 Engine, you should set "target": "ES2019" in your tsconfig.json_
   - did that
+
+### Prepare For Tests
+
+- add `.claspignore` file:
+  - _use `npx clasp status > clasp-status.log` and consult the resulting file fyi_
+```
+# ignore all files…
+**/**
+
+# except the extensions…
+!appsscript.json
+!**/*.gs
+!**/*.js
+!**/*.ts
+!**/*.html
+
+# ignore even valid files if in…
+.git/**
+node_modules/**
+
+# ignore test files
+**/*.spec.ts
+```
